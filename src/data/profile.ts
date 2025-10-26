@@ -12,6 +12,9 @@ export type Profile = {
   lookingFor: string;
   avatar: string;
   resumeUrl: string;
+  linkedin: string;
+  github: string;
+  phoneNumber: string;
   skills: string[];
   links: LinkItem[];
 };

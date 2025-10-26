@@ -41,9 +41,14 @@ export default function HomePage() {
             <aside className="space-y-4 lg:w-80">
               <div className="card p-5 md:p-6">
                 <h2 className="section-title">Skills</h2>
-                <div className="mt-3 flex flex-wrap gap-2">
+                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {profile.skills.map((skill) => (
-                    <span key={skill} className="badge">{skill}</span>
+                    <span
+                      key={skill}
+                      className="inline-block bg-green-50 dark:bg-green-950 px-2 py-1 text-sm text-neutral-800 dark:text-neutral-200 font-medium"
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
               </div>

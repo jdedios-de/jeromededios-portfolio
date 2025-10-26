@@ -1,6 +1,6 @@
 "use client";
 
-import { profile } from '../data/Profile';
+import { profile } from '../data/profile';
 import { MapPinIcon, EnvelopeIcon, BriefcaseIcon, ClipboardIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 
