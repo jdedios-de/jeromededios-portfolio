@@ -4,6 +4,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { ProfileCard } from '../components/ProfileCard';
 import { ProjectCard } from '../components/ProjectCard';
+import { ContactCard } from '../components/ContactCard';
 import { CvCard } from '../components/CvCard';
 import { profile } from '../data/profile';
 import { projects } from '../data/projects';
@@ -34,6 +35,7 @@ export default function HomePage() {
               </div>
               <p className="mt-4 text-neutral-700 dark:text-neutral-300 leading-relaxed">{profile.summary}</p>
               <ProfileCard />
+              <ContactCard />
             </div>
 
             <aside className="space-y-4 lg:w-80">
