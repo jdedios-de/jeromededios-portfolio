@@ -83,7 +83,7 @@ export const projects: Project[] = [
 - `public/images/project-placeholder.svg` - Default project image (800x450px)
 
 **Optional images:**
-- `public/images/logo.svg` - Your logo (28x28px, shown in header)
+- `public/images/logo.png` - Your logo (28x28px, shown in header)
 - `public/images/logos/github.svg` - GitHub icon (inherits text color)
 - `public/images/logos/linkedin.svg` - LinkedIn icon (inherits text color)
 
@@ -172,7 +172,7 @@ src/
 public/
 └── images/                # Your images
     ├── avatar.svg         # Your profile picture
-    ├── logo.svg           # Your logo
+    ├── logo.png           # Your logo
     ├── project-placeholder.svg  # Default project image
     └── logos/             # Social media icons
 ```
