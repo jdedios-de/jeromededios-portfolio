@@ -1,4 +1,4 @@
-// File: /Users/mstark/ghq/github.com/webeet-io/_onboarding_portfolio_template/src/app/layout.tsx
+// File: /Users/jdedios/projects/personal-project/portfolio/jeromededios-portfolio/src/app/layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
