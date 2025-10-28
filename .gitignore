@@ -28,4 +28,4 @@ node_modules/
 npm-debug.log*
 .vercel
 .next
-.idea
+.idea.next
