@@ -12,13 +12,14 @@ import { cvArticles } from '../data/cv';
 
 // Define skill categories
 const skillCategories = {
-  "Programming Languages": [
+  "Programming Languages and Scripting": [
     "Python",
     "TypeScript",
     "JavaScript",
-    "jQuery",
     "Java",
     "Groovy",
+    "CSS",
+    "HTML",
   ],
   "Frameworks & Libraries": [
     "FastAPI",
@@ -36,36 +37,45 @@ const skillCategories = {
     "Zod",
     "Zustand",
     "Node.js",
+    "Struts",
+    "SQLModel",
+    "Pydantic",
+    "Loguru",
+    "jQuery",
+    "EXTJS",
   ],
   Databases: [
     "PostgreSQL",
     "Supabase",
     "MySQL",
-    "Elastic",
     "SQLite",
     "Oracle",
     "DB2",
     "SQL",
     "PL/SQL",
   ],
+  "Web Technologies": [
+    "HTML/CSS",
+    "XML",
+    "JAX-WS",
+    "Ajax",
+    "JSP",
+    "Servlets",
+    "Java EE",
+    "Java Web",
+  ],
   "Cloud & DevOps": [
     "AWS",
     "EC2",
     "RDS",
     "Terraform",
-    "Kubernetes",
     "Jenkins",
     "GitHub Actions",
     "CI/CD",
     "Git",
     "Trunk-based development",
-  ],
-  "Web Development": [
-    "React",
-    "React Router",
-    "Storybook",
-    "Tailwind CSS",
-    "Backend-for-Frontend (BFF)",
+    "Bamboo",
+    "Bitbucket",
   ],
   Testing: [
     "Jest",
@@ -74,6 +84,7 @@ const skillCategories = {
     "JUnit",
     "Pytest",
     "TDD",
+    "JMeter",
   ],
   "AI/LLM": [
     "LangChain",
@@ -83,6 +94,24 @@ const skillCategories = {
   Observability: [
     "Grafana",
     "Kibana",
+    "AppDynamics",
+    "Catchpoint",
+    "PRTG",
+    "Icinga",
+  ],
+  "Tools & Platforms": [
+    "Jira",
+    "Confluence",
+    "Fisheye",
+    "OpenESB",
+  ],
+  "IDEs & Servers": [
+    "IntelliJ IDEA",
+    "MyEclipse",
+    "NetBeans",
+    "Apache Tomcat",
+    "Glassfish",
+    "WebLogic",
   ],
 };
 
@@ -174,30 +203,155 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-            </div>
 
-            <aside className="space-y-4 lg:w-80">
-              <div className="card p-5 md:p-6">
-                <h2 className="section-title">Skills</h2>
-                <div className="mt-4 space-y-4">
-                  {Object.entries(skillCategories).map(([category, skills]) => (
-                    <div key={category}>
-                      <h3 className="text-sm font-semibold text-neutral-400 dark:text-neutral-200">{category}</h3>
-                      <div className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {skills.map((skill) => (
-                          <span
-                            key={skill}
-                            className="inline-block bg-green-50 dark:bg-green-950 px-2 py-1 text-sm text-neutral-800 dark:text-neutral-200 font-small"
-                          >
-                            {skill}
-                          </span>
-                        ))}
+                {/* Education Section */}
+                <div className="mt-8">
+                  <h2 className="section-title mb-4">Education</h2>
+                  <div className="space-y-5">
+                    {/* Masterschool - Cloud Engineering */}
+                    <div className="card p-5">
+                      <div className="flex gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-sm">
+                            MS
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-lg">Masterschool</h3>
+                          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                            Cloud Engineering, Information Technology
+                          </p>
+                          <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
+                            Jun 2025 – Nov 2025
+                          </p>
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {["AWS", "Infrastructure as Code (IaC)", "Cloud Computing", "Cloud Storage"].map((skill) => (
+                              <span
+                                key={skill}
+                                className="inline-block bg-blue-50 dark:bg-blue-950/50 px-2.5 py-1 text-xs text-blue-800 dark:text-blue-200 font-medium rounded-md border border-blue-200 dark:border-blue-800/40"
+                              >
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  ))}
+
+                    {/* Masterschool - Generative AI Engineering */}
+                    <div className="card p-5">
+                      <div className="flex gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white font-bold text-sm">
+                            AI
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-lg">Masterschool</h3>
+                          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                            Generative AI Engineering, Artificial Intelligence
+                          </p>
+                          <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
+                            Sep 2024 – Jun 2025
+                          </p>
+                          <ul className="mt-2 text-sm text-neutral-700 dark:text-neutral-300 list-disc list-inside space-y-1">
+                            <li>Intensive online training in software & AI engineering</li>
+                            <li>Hands-on with Python, APIs, JavaScript, Flask, SQL</li>
+                          </ul>
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {[
+                              "Python",
+                              "OpenAI API",
+                              "LangChain",
+                              "LLMs",
+                              "Token Optimization",
+                              "Text Embeddings",
+                              "Streams",
+                            ].map((skill) => (
+                              <span
+                                key={skill}
+                                className="inline-block bg-purple-50 dark:bg-purple-950/50 px-2.5 py-1 text-xs text-purple-800 dark:text-purple-200 font-medium rounded-md border border-purple-200 dark:border-purple-800/40"
+                              >
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* University of the Philippines Open University */}
+                    <div className="card p-5">
+                      <div className="flex gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center text-white font-bold text-sm">
+                            UP
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-lg">
+                            University of the Philippines Open University
+                          </h3>
+                          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                            (Incomplete) Master of Science, Management Information Systems
+                          </p>
+                          <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
+                            Sep 2012 – Dec 2012
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Asian Development Foundation College */}
+                    <div className="card p-5">
+                      <div className="flex gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-white font-bold text-sm">
+                            AD
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-lg">
+                            Asian Development Foundation College, Philippines
+                          </h3>
+                          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                            Bachelor of Science - BS, Computer Science
+                          </p>
+                          <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
+                            Sep 2000 – Jun 2004
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </aside>
+            </div>
+
+                <aside className="space-y-4 lg:w-80">
+                  <div className="card p-5 md:p-6">
+                    <h2 className="section-title">Skills</h2>
+                    <div className="mt-4 space-y-6">
+                      {Object.entries(skillCategories).map(([category, skills]) => (
+                        <div key={category}>
+                          <h3 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-2 tracking-tight">
+                            {category}
+                          </h3>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            {skills.map((skill) => (
+                              <span
+                                key={skill}
+                                className="inline-block bg-green-50 dark:bg-green-950/50 px-2.5 py-1 text-xs text-green-800 dark:text-green-200 font-medium rounded-md border border-green-200 dark:border-green-800/40"
+                              >
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                </aside>
           </div>
         </section>
 
