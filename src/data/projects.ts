@@ -9,6 +9,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Grocery Web Application",
+    description:
+      "This project demonstrates my ability to architect, containerize, and deploy a full-stack solution in the AWS ecosystem—showcasing strong proficiency in DevOps, IaC, and cloud-native application development.",
+    tags: ["Terraform", "EC2", "S3", "RDS", "IAC"],
+    image: "/images/project-placeholder.svg",
+    repo: "https://github.com/jdedios-de/AWS_grocery",
+  },
+  {
     title: "Layered AI (Webeet.io)",
     description:
       "Implemented LLM orchestration to generate neighborhood scores and visualized them as a choropleth on a map-centric interface. Built BFF endpoints to orchestrate data for SSR React views.",

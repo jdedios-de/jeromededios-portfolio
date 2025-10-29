@@ -84,6 +84,67 @@ export const cvArticles: CvArticle[] = [
     tags: ['Python', 'Grafana', 'Jenkins', 'PRTG', 'Shell Scripting', 'Ansible', 'AppDynamics', 'Icinga'],
     type: 'work',
   },
+  {
+    title: 'Product Operations Specialist (Sportsbook)',
+    org: 'Bayview Technologies, Inc',
+    location: 'On-Site',
+    period: 'Sep 2017 - Sep 2019',
+    bullets: [
+      'Managed daily triage and escalation of production bugs, cutting average resolution time by 25%.',
+      'Implemented log-based monitoring using Kibana and AppDynamics, improving detection of production issues.',
+      'Implemented monitoring via Catchpoint scripting, enhancing real-time visibility into user experience and application health.',
+      'Designed and executed deployment strategies including PRTG Remote Probe and Web Server Sensors to monitor 3rd party APIs and payment gateways—improving system reliability by 40%',
+    ],
+    tags: ['Kibana', 'PRTG', 'AppDynamics', 'Catchpoint'],
+    type: 'work',
+  },
+  {
+    title: 'Java Developer / OpenESB Developer',
+    org: 'Bayview Technologies, Inc',
+    location: 'On-Site',
+    period: 'May 2015 - Sep 2017',
+    bullets: [
+      'Built and maintained middleware services handling integration for 5+ internal systems.',
+      'Developed and executed load tests with JMeter, supporting scalability testing for 3 critical services.',
+    ],
+    tags: ['OpenESB', 'Java Core', 'JMeter', 'Java'],
+    type: 'work',
+  },
+  {
+    title: 'JEE Developer / Analyst',
+    org: 'Salmat',
+    location: 'On-Site',
+    period: 'Mar 2012 - Jan 2015',
+    bullets: [
+      'Worked on 20+ Java-based features on schedule using Agile/Scrum, while streamlining issue triage workflows to reduce critical ticket backlog by 100%.',
+    ],
+    tags: ['J2EE Application Development', '(CI/CD)', 'Jira', 'Confluence', 'Bitbucket', 'Bamboo'],
+    type: 'work',
+  },
+  {
+    title: 'Java Web Developer',
+    org: 'Intevalue Services Inc.',
+    location: 'On-Site',
+    period: 'Mar 2012 - Jan 2015',
+    bullets: [
+      'Developed and maintained features for online gaming platforms used by 1,000+ daily users.',
+      'Improved transactional reliability by 20% by optimizing backend integration for payments and promotions.',
+    ],
+    tags: ['Spring', 'Strust2', 'Java', 'PL/SQL'],
+    type: 'work',
+  },
+  {
+    title: 'Junior Software Engineer',
+    org: 'AC Corporation',
+    location: 'On-Site',
+    period: 'Dec 2008 - Aug 2010',
+    bullets: [
+      'Participated in the rollout of an e-tax system for the Bureau of Internal Revenue, supporting 10,000+ end users.',
+      'Resolved 80% of client support issues independently, including payment and printing system bugs.',
+    ],
+    tags: ['Agile Application Development', 'JAX-WS', 'Java Core', 'Web Services', 'Hibernate'],
+    type: 'work',
+  },
 ];
 
 

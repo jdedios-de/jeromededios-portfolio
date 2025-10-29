@@ -194,9 +194,14 @@ export default function HomePage() {
                       <p className="text-sm font-semibold text-blue-900 dark:text-blue-100">
                         Currently Learning
                       </p>
-                      <p className="mt-1 text-sm text-blue-700 dark:text-blue-300">
-                        <strong>A2 German</strong> in progress — weekly lessons, <strong>online</strong>.
-                      </p>
+                      <ul className="mt-2 space-y-1.5 text-sm text-blue-700 dark:text-blue-300 list-disc list-inside">
+                        <li>
+                          <strong>A2 German</strong> in progress — weekly lessons, <strong>online</strong>.
+                        </li>
+                        <li>
+                          <strong>Rust Programming Language</strong> in progress.
+                        </li>
+                      </ul>
                       <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
                         Updated October 2025
                       </p>
