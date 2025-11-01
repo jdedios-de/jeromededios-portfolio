@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Header } from '../components/Header';
@@ -116,57 +118,76 @@ const skillCategories = {
 };
 
 export default function HomePage() {
-  return (
-    <main className="min-h-screen flex flex-col">
-      <Header />
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-      <div className="flex-1">
-        <section className="container-grid pt-10 sm:pt-14">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-6 lg:gap-8">
-            <div className="card hero-card p-5 md:p-6">
-              <div className="flex items-center gap-4">
-                <Image
-                  src={profile.avatar}
-                  alt={`${profile.name} avatar`}
-                  width={88}
-                  height={88}
-                  className="rounded-full border border-neutral-200/40 dark:border-neutral-800/40 bg-white/40 dark:bg-neutral-900/40"
-                />
-                <div>
-                  <h1 className="text-2xl sm:text-3xl font-semibold">{profile.name}</h1>
-                  <p className="text-neutral-600 dark:text-neutral-300">{profile.role}</p>
+  return (
+    <>
+      {/* Skip to Main Content */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-brand text-white px-4 py-2 rounded-md focus:ring-2 focus:ring-brand/50 focus:ring-offset-2"
+      >
+        Skip to main content
+      </a>
+
+      <main id="main-content" className="min-h-screen flex flex-col" role="main">
+        <Header />
+
+        <div className="flex-1">
+          <section className="container-grid pt-10 sm:pt-14">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-6 lg:gap-8">
+              <div className="card hero-card p-5 md:p-6">
+                <div className="flex items-center gap-4">
+                  <Image
+                    src={profile.avatar}
+                    alt={`Photo of ${profile.name}, ${profile.role}`}
+                    width={88}
+                    height={88}
+                    className="rounded-full border border-neutral-200/40 dark:border-neutral-800/40 bg-white/40 dark:bg-neutral-900/40"
+                  />
+                  <div>
+                    <h1 className="text-2xl sm:text-3xl font-semibold">{profile.name}</h1>
+                    <p className="text-neutral-600 dark:text-neutral-300">{profile.role}</p>
+                  </div>
                 </div>
-              </div>
-              <p className="mt-4 text-neutral-700 dark:text-neutral-300 text-justify">{profile.summary}</p>
-              <ProfileCard />
-              <ContactCard />
+                <p className="mt-4 text-neutral-700 dark:text-neutral-300 text-justify">{profile.summary}</p>
+                <ProfileCard />
+                <ContactCard />
+
+                {/* Jump to Buttons - Accessible */}
                 <div className="mt-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <a
-                      href="#projects"
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors"
+                    <button
+                      onClick={() => scrollToSection('projects')}
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
+                      aria-label="Scroll to Projects section"
                     >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                       </svg>
                       Jump to Projects
-                    </a>
+                    </button>
 
-                    <a
-                      href="#cv"
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors"
+                    <button
+                      onClick={() => scrollToSection('cv')}
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
+                      aria-label="Scroll to Experience section"
                     >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                       </svg>
                       Jump to Experience
-                    </a>
+                    </button>
                   </div>
                 </div>
+
+                {/* Info Banner: Open to Opportunities */}
                 <div className="mt-8 p-5 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-200 dark:border-blue-800">
                   <div className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg aria-hidden="true" className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
@@ -183,10 +204,12 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
+
+                {/* Info Banner: Currently Learning */}
                 <div className="mt-8 p-5 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-200 dark:border-blue-800">
                   <div className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center">
-                      <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg aria-hidden="true" className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                       </svg>
                     </div>
@@ -213,6 +236,7 @@ export default function HomePage() {
                 <div className="mt-8">
                   <h2 className="section-title mb-4">Education</h2>
                   <div className="space-y-5">
+
                     {/* Masterschool - Cloud Engineering */}
                     <div className="card p-5">
                       <div className="flex gap-4">
@@ -230,10 +254,14 @@ export default function HomePage() {
                             Jun 2025 – Nov 2025
                           </p>
                           <div className="mt-3 flex flex-wrap gap-2">
-                            {["AWS", "Infrastructure as Code (IaC)", "Cloud Computing", "Cloud Storage"].map((skill) => (
+                            {["AWS", "Infrastructure as Code (IaC)", "Cloud Computing", "Cloud Storage"].map((skill, idx) => (
                               <span
                                 key={skill}
-                                className="inline-block bg-blue-50 dark:bg-blue-950/50 px-2.5 py-1 text-xs text-blue-800 dark:text-blue-200 font-medium rounded-md border border-blue-200 dark:border-blue-800/40"
+                                className="inline-block bg-blue-50 dark:bg-blue-950/50 px-2.5 py-1 text-xs text-blue-800 dark:text-blue-200 font-medium rounded-md border border-blue-200 dark:border-blue-800/40 motion-safe:animate-fadeInUp hover:scale-105 hover:shadow-md hover:bg-blue-100 dark:hover:bg-blue-900/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200"
+                                style={{ animationDelay: `${idx * 30}ms` }}
+                                tabIndex={0}
+                                role="listitem"
+                                aria-label={`Skill: ${skill}`}
                               >
                                 {skill}
                               </span>
@@ -243,7 +271,7 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    {/* Masterschool - Generative AI Engineering */}
+                    {/* Masterschool - Generative AI */}
                     <div className="card p-5">
                       <div className="flex gap-4">
                         <div className="flex-shrink-0">
@@ -272,10 +300,14 @@ export default function HomePage() {
                               "Token Optimization",
                               "Text Embeddings",
                               "Streams",
-                            ].map((skill) => (
+                            ].map((skill, idx) => (
                               <span
                                 key={skill}
-                                className="inline-block bg-purple-50 dark:bg-purple-950/50 px-2.5 py-1 text-xs text-purple-800 dark:text-purple-200 font-medium rounded-md border border-purple-200 dark:border-purple-800/40"
+                                className="inline-block bg-purple-50 dark:bg-purple-950/50 px-2.5 py-1 text-xs text-purple-800 dark:text-purple-200 font-medium rounded-md border border-purple-200 dark:border-purple-800/40 motion-safe:animate-fadeInUp hover:scale-105 hover:shadow-md hover:bg-purple-100 dark:hover:bg-purple-900/50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200"
+                                style={{ animationDelay: `${idx * 30}ms` }}
+                                tabIndex={0}
+                                role="listitem"
+                                aria-label={`Skill: ${skill}`}
                               >
                                 {skill}
                               </span>
@@ -285,7 +317,7 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    {/* University of the Philippines Open University */}
+                    {/* UP Open University */}
                     <div className="card p-5">
                       <div className="flex gap-4">
                         <div className="flex-shrink-0">
@@ -330,87 +362,119 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Skills Sidebar - Accessible + Animated */}
+              <aside className="space-y-4 lg:w-80" role="complementary" aria-label="Skills">
+                <div className="card p-5 md:p-6">
+                  <h2 className="section-title">Skills</h2>
+
+                  <div className="mt-4 space-y-6">
+                    {Object.entries(skillCategories).map(([category, skills]) => (
+                      <div key={category}>
+                        <h3 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-2 tracking-tight">
+                          {category}
+                        </h3>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {skills.map((skill, idx) => (
+                            <span
+                              key={skill}
+                              className={`
+                                inline-block
+                                px-2.5 py-1 text-xs font-medium rounded-md
+                                border border-green-200 dark:border-green-800/40
+                                bg-green-50 dark:bg-green-950/50
+                                text-green-800 dark:text-green-200
+
+                                motion-safe:animate-fadeInUp
+
+                                transition-all duration-200 ease-out
+                                hover:scale-105 hover:shadow-md hover:bg-green-100 dark:hover:bg-green-900/50
+                                focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900
+                              `}
+                              style={{ animationDelay: `${idx * 30}ms` }}
+                              tabIndex={0}
+                              role="listitem"
+                              aria-label={`Skill: ${skill}`}
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </section>
+
+          {/* Projects Section */}
+          <section id="projects" className="container-grid pt-10 sm:pt-14" aria-labelledby="projects-heading">
+            <div className="flex items-end justify-between gap-4">
+              <h2 id="projects-heading" className="section-title">Projects</h2>
+              <Link
+                href="/projects"
+                className="text-brand hover:underline text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900 rounded"
+              >
+                View all
+              </Link>
+            </div>
+            <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {projects.slice(0, 4).map((p) => (
+                <ProjectCard key={p.title} project={p} />
+              ))}
             </div>
 
-                <aside className="space-y-4 lg:w-80">
-                  <div className="card p-5 md:p-6">
-                    <h2 className="section-title">Skills</h2>
-                    <div className="mt-4 space-y-6">
-                      {Object.entries(skillCategories).map(([category, skills]) => (
-                        <div key={category}>
-                          <h3 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-2 tracking-tight">
-                            {category}
-                          </h3>
-                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            {skills.map((skill) => (
-                              <span
-                                key={skill}
-                                className="inline-block bg-green-50 dark:bg-green-950/50 px-2.5 py-1 text-xs text-green-800 dark:text-green-200 font-medium rounded-md border border-green-200 dark:border-green-800/40"
-                              >
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                </aside>
-          </div>
-        </section>
-
-        <section id="projects" className="container-grid pt-10 sm:pt-14">
-          <div className="flex items-end justify-between gap-4">
-            <h2 className="section-title">Projects</h2>
-            <Link href="/projects" className="text-brand hover:underline text-sm">View all</Link>
-          </div>
-          <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {projects.slice(0, 4).map((p) => (
-              <ProjectCard key={p.title} project={p} />
-            ))}
-          </div>
+            {/* Back to Top + View All */}
             <div className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-800">
               <div className="flex flex-wrap items-center justify-between gap-4 text-sm">
-                {/* Back to Top */}
-                <a
-                  href="#top"
-                  className="inline-flex items-center gap-2 rounded-md bg-brand/10 px-4 py-2 font-medium text-brand hover:bg-brand/20 transition-colors"
+                <button
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  className="inline-flex items-center gap-2 rounded-md bg-brand/10 px-4 py-2 font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
+                  aria-label="Scroll to top of page"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
                   </svg>
                   Back to Top
-                </a>
+                </button>
 
-                {/* More Projects */}
                 <Link
                   href="/projects"
-                  className="inline-flex items-center gap-2 rounded-md bg-green-50 dark:bg-green-950 px-4 py-2 font-medium text-green-700 dark:text-green-300 hover:bg-green-100 dark:hover:bg-green-900 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-md bg-brand/10 px-4 py-2 font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                   View All Projects
                 </Link>
               </div>
             </div>
-        </section>
+          </section>
 
-        <section id="cv" className="container-grid pt-10 sm:pt-14 pb-16">
-          <div className="flex items-end justify-between gap-4">
-            <h2 className="section-title">Experience</h2>
-            <Link href="/resume" className="text-brand hover:underline text-sm">View full CV</Link>
-          </div>
-          <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {cvArticles.slice(0, 4).map((item) => (
-              <CvCard key={`${item.title}-${item.org ?? ''}`} item={item} />
-            ))}
-          </div>
-        </section>
-      </div>
+          {/* Experience Section */}
+          <section id="cv" className="container-grid pt-10 sm:pt-14 pb-16" aria-labelledby="cv-heading">
+            <div className="flex items-end justify-between gap-4">
+              <h2 id="cv-heading" className="section-title">Experience</h2>
+              <Link
+                href="/resume"
+                className="text-brand hover:underline text-sm focus:outline-none081 focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900 rounded"
+              >
+                View full CV
+              </Link>
+            </div>
+            <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {cvArticles.slice(0, 4).map((item) => (
+                <CvCard key={`${item.title}-${item.org ?? ''}`} item={item} />
+              ))}
+            </div>
+          </section>
+        </div>
 
-      <Footer />
-    </main>
+        <Footer />
+      </main>
+    </>
   );
 }
