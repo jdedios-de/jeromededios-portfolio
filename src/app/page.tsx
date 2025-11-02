@@ -124,14 +124,6 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Skip to Main Content */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-brand text-white px-4 py-2 rounded-md focus:ring-2 focus:ring-brand/50 focus:ring-offset-2"
-      >
-        Skip to main content
-      </a>
-
       <main id="main-content" className="min-h-screen flex flex-col" role="main">
         <Header />
 
@@ -156,30 +148,47 @@ export default function HomePage() {
                 <ProfileCard />
                 <ContactCard />
 
-                {/* Jump to Buttons - Accessible */}
+               {/* Action Row: Download PDF + Jump to Projects + Jump to Experience */}
                 <div className="mt-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+
+                    {/* Download Resume (PDF) - Full width on mobile */}
+                    <a
+                      href="/resume.pdf"
+                      download="Jerome-de-Dios-CV-2025.pdf"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg w-full"
+                      aria-label="Download 1-page resume as PDF"
+                    >
+                      <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      1 Page Resume
+                    </a>
+
+                    {/* Jump to Projects */}
                     <button
                       onClick={() => scrollToSection('projects')}
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900 w-full"
                       aria-label="Scroll to Projects section"
                     >
                       <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                       </svg>
-                      Jump to Projects
+                      Projects
                     </button>
 
+                    {/* Jump to Experience */}
                     <button
                       onClick={() => scrollToSection('cv')}
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900 w-full"
                       aria-label="Scroll to Experience section"
                     >
                       <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                       </svg>
-                      Jump to Experience
+                      Experience
                     </button>
+
                   </div>
                 </div>
 
