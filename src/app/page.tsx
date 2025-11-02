@@ -154,8 +154,8 @@ export default function HomePage() {
 
                     {/* Download Resume (PDF) - Full width on mobile */}
                     <a
-                      href="/resume.pdf"
-                      download="Jerome-de-Dios-CV-2025.pdf"
+                      href="/Jerome-de-Dios-Resume-2025.pdf"
+                      download="Jerome-de-Dios-Resume-2025.pdf"
                       className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg w-full"
                       aria-label="Download 1-page resume as PDF"
                     >
