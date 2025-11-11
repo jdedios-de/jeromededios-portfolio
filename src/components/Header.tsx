@@ -18,7 +18,7 @@ export function Header() {
         <nav className="flex items-center gap-4 text-sm">
           <Link href="/" className="hover:underline">Home</Link>
           <Link href="/projects" className="hover:underline">Projects</Link>
-          <Link href={profile.resumeUrl} className="hover:underline">Resume</Link>
+          <Link href={profile.resumeUrl} className="hover:underline">Experience</Link>
           <button
             onClick={toggleDark}
             className="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"

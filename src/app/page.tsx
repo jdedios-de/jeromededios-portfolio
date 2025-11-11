@@ -148,11 +148,37 @@ export default function HomePage() {
                 <ProfileCard />
                 <ContactCard />
 
-               {/* Action Row: Download PDF + Jump to Projects + Jump to Experience */}
+                {/* Action Row: Download PDF + Jump to Projects + Jump to Experience */}
                 <div className="mt-6">
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
-                    {/* Download Resume (PDF) - Full width on mobile */}
+                    {/* Application Support / SRE Resume */}
+                    <a
+                      href="/Jerome-de-Dios-AppSupport-SRE.pdf"
+                      download="Jerome-de-Dios-AppSupport-SRE.pdf"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg w-full"
+                      aria-label="Download Application Support / SRE resume as PDF"
+                    >
+                      <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      App Support/SRE Resume (SEO and LPS)
+                    </a>
+
+                    {/* GenAI Resume */}
+                    <a
+                      href="/Jerome-de-Dios-GenAI.pdf"
+                      download="Jerome-de-Dios-GenAI.pdf"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg w-full"
+                      aria-label="Download GenAI resume as PDF"
+                    >
+                      <svg aria-hidden="true" className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      GenAI Resume (SEO and LPS)
+                    </a>
+
+                    {/* 1 Page Resume (replaces Cloud Resume) */}
                     <a
                       href="/Jerome-de-Dios-Resume-2025.pdf"
                       download="Jerome-de-Dios-Resume-2025.pdf"
@@ -165,30 +191,32 @@ export default function HomePage() {
                       1 Page Resume
                     </a>
 
-                    {/* Jump to Projects */}
-                    <button
-                      onClick={() => scrollToSection('projects')}
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900 w-full"
-                      aria-label="Scroll to Projects section"
-                    >
-                      <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                      </svg>
-                      Projects
-                    </button>
+                    {/* Projects & Experience – share the same row */}
+                    <div className="col-span-1 sm:col-span-3 flex flex-col sm:flex-row gap-3">
+                      {/* Jump to Projects */}
+                      <button
+                        onClick={() => scrollToSection('projects')}
+                        className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
+                        aria-label="Scroll to Projects section"
+                      >
+                        <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                        Projects
+                      </button>
 
-                    {/* Jump to Experience */}
-                    <button
-                      onClick={() => scrollToSection('cv')}
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900 w-full"
-                      aria-label="Scroll to Experience section"
-                    >
-                      <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                      </svg>
-                      Experience
-                    </button>
-
+                      {/* Jump to Experience */}
+                      <button
+                        onClick={() => scrollToSection('cv')}
+                        className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
+                        aria-label="Scroll to Experience section"
+                      >
+                        <svg aria-hidden="true" className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                        Experience
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -255,7 +283,7 @@ export default function HomePage() {
                           </div>
                         </div>
                         <div className="flex-1">
-                          <h3 className="font-semibold text-lg">Masterschool</h3>
+                          <h3 className="font-semibold text-lg">Masterschool - Berlin, Germany</h3>
                           <p className="text-sm text-neutral-600 dark:text-neutral-400">
                             Cloud Engineering, Information Technology
                           </p>
@@ -289,7 +317,7 @@ export default function HomePage() {
                           </div>
                         </div>
                         <div className="flex-1">
-                          <h3 className="font-semibold text-lg">Masterschool</h3>
+                          <h3 className="font-semibold text-lg">Masterschool - Berlin, Germany</h3>
                           <p className="text-sm text-neutral-600 dark:text-neutral-400">
                             Generative AI Engineering, Artificial Intelligence
                           </p>
@@ -322,28 +350,6 @@ export default function HomePage() {
                               </span>
                             ))}
                           </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* UP Open University */}
-                    <div className="card p-5">
-                      <div className="flex gap-4">
-                        <div className="flex-shrink-0">
-                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center text-white font-bold text-sm">
-                            UP
-                          </div>
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="font-semibold text-lg">
-                            University of the Philippines Open University
-                          </h3>
-                          <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                            (Incomplete) Master of Science, Management Information Systems
-                          </p>
-                          <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
-                            Sep 2012 – Dec 2012
-                          </p>
                         </div>
                       </div>
                     </div>

@@ -12,7 +12,7 @@ export default function ResumePage() {
       <section className="container-grid py-10 sm:py-14 flex-1">
         <div className="card p-6">
           <div className="flex items-center justify-between gap-4">
-            <h1 className="section-title">Resume</h1>
+            <h1 className="section-title">Experience</h1>
             <PrintButton />
           </div>
           <div className="mt-6 space-y-4 text-sm leading-6">
