@@ -13,7 +13,7 @@ export const cvArticles: CvArticle[] = [
     title: 'Software and Cloud Engineer',
     org: 'Webeet',
     location: 'Remote',
-    period: 'Sept 2025 - Present',
+    period: 'Sept 2025 - November 2025',
     bullets: [
       'Built features using TypeScript, Fastify, and React with React Router, following Test-Driven Development (TDD) for reliable, maintainable code.',
       'Created secure, scalable, and high-performance solutions with strong data isolation and authentication',
