@@ -515,7 +515,7 @@ export default function HomePage() {
                         <div className="flex gap-4">
                           <div className="flex-shrink-0">
                             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white font-bold text-sm">
-                              I1
+                              WB
                             </div>
                           </div>
                           <div className="flex-1">
