@@ -576,6 +576,29 @@ export default function HomePage() {
                                 </svg>
                                 Cloud Engineering
                               </a>
+
+                                                            <a
+                                href="/Jerome de Dios - Webeet Recommendation.pdf"
+                                download="Jerome de Dios - Webeet Recommendation.pdf"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
+                                aria-label="Download Webeet Recommendation"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  className="w-4 h-4"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                  />
+                                </svg>
+                                Webeet Recommendation
+                              </a>
                             </div>
                           </div>
                         </div>
