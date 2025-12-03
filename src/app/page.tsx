@@ -1,130 +1,125 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-import { ProfileCard } from '../components/ProfileCard';
-import { ProjectCard } from '../components/ProjectCard';
-import { ContactCard } from '../components/ContactCard';
-import { CvCard } from '../components/CvCard';
-import { profile } from '../data/profile';
-import { projects } from '../data/projects';
-import { cvArticles } from '../data/cv';
+import Image from "next/image";
+import Link from "next/link";
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import { ProfileCard } from "../components/ProfileCard";
+import { ProjectCard } from "../components/ProjectCard";
+import { ContactCard } from "../components/ContactCard";
+import { CvCard } from "../components/CvCard";
+import { profile } from "../data/profile";
+import { projects } from "../data/projects";
+import { cvArticles } from "../data/cv";
 
 // Define skill categories
 const skillCategories = {
-  'Programming Languages and Scripting': [
-    'Python',
-    'TypeScript',
-    'JavaScript',
-    'Java',
-    'Groovy',
-    'CSS',
-    'HTML',
+  "Programming Languages and Scripting": [
+    "Python",
+    "TypeScript",
+    "JavaScript",
+    "Java",
+    "Groovy",
+    "CSS",
+    "HTML",
   ],
-  'Frameworks & Libraries': [
-    'FastAPI',
-    'Flask',
-    'Fastify',
-    'Spring',
-    'Hibernate',
-    'JDBC',
-    'SQLAlchemy',
-    'Knex.js',
-    'React',
-    'React Router',
-    'Storybook',
-    'Tailwind CSS',
-    'Zod',
-    'Zustand',
-    'Node.js',
-    'Struts',
-    'SQLModel',
-    'Pydantic',
-    'Loguru',
-    'jQuery',
-    'EXTJS',
+  "Frameworks & Libraries": [
+    "FastAPI",
+    "Flask",
+    "Fastify",
+    "Spring",
+    "Hibernate",
+    "JDBC",
+    "SQLAlchemy",
+    "Knex.js",
+    "React",
+    "React Router",
+    "Storybook",
+    "Tailwind CSS",
+    "Zod",
+    "Zustand",
+    "Node.js",
+    "Struts",
+    "SQLModel",
+    "Pydantic",
+    "Loguru",
+    "jQuery",
+    "EXTJS",
   ],
   Databases: [
-    'PostgreSQL',
-    'Supabase',
-    'MySQL',
-    'SQLite',
-    'Oracle',
-    'DB2',
-    'SQL',
-    'PL/SQL',
+    "PostgreSQL",
+    "Supabase",
+    "MySQL",
+    "SQLite",
+    "Oracle",
+    "DB2",
+    "SQL",
+    "PL/SQL",
   ],
-  'Web Technologies': [
-    'HTML/CSS',
-    'XML',
-    'JAX-WS',
-    'Ajax',
-    'JSP',
-    'Servlets',
-    'Java EE',
-    'Java Web',
+  "Web Technologies": [
+    "HTML/CSS",
+    "XML",
+    "JAX-WS",
+    "Ajax",
+    "JSP",
+    "Servlets",
+    "Java EE",
+    "Java Web",
   ],
-  'Cloud & DevOps': [
-    'AWS',
-    'EC2',
-    'RDS',
-    'Terraform',
-    'Jenkins',
-    'GitHub Actions',
-    'CI/CD',
-    'Git',
-    'Trunk-based development',
-    'Bamboo',
-    'Bitbucket',
+  "Cloud & DevOps": [
+    "AWS",
+    "EC2",
+    "RDS",
+    "Terraform",
+    "Jenkins",
+    "GitHub Actions",
+    "CI/CD",
+    "Git",
+    "Trunk-based development",
+    "Bamboo",
+    "Bitbucket",
   ],
   Testing: [
-    'Jest',
-    'React-Testing-Library',
-    'Selenium',
-    'JUnit',
-    'Pytest',
-    'TDD',
-    'JMeter',
+    "Jest",
+    "React-Testing-Library",
+    "Selenium",
+    "JUnit",
+    "Pytest",
+    "TDD",
+    "JMeter",
   ],
-  'AI/LLM': [
-    'LangChain',
-    'LangGraph',
-    'RAG / LLM',
-  ],
+  "AI/LLM": ["LangChain", "LangGraph", "RAG / LLM"],
   Observability: [
-    'Grafana',
-    'Kibana',
-    'AppDynamics',
-    'Catchpoint',
-    'PRTG',
-    'Icinga',
+    "Grafana",
+    "Kibana",
+    "AppDynamics",
+    "Catchpoint",
+    "PRTG",
+    "Icinga",
   ],
-  'Tools & Platforms': [
-    'Jira',
-    'Confluence',
-    'Fisheye',
-    'OpenESB',
-  ],
-  'IDEs & Servers': [
-    'IntelliJ IDEA',
-    'MyEclipse',
-    'NetBeans',
-    'Apache Tomcat',
-    'Glassfish',
-    'WebLogic',
+  "Tools & Platforms": ["Jira", "Confluence", "Fisheye", "OpenESB"],
+  "IDEs & Servers": [
+    "IntelliJ IDEA",
+    "MyEclipse",
+    "NetBeans",
+    "Apache Tomcat",
+    "Glassfish",
+    "WebLogic",
   ],
 };
 
 export default function HomePage() {
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <>
-      <main id="main-content" className="min-h-screen flex flex-col" role="main">
+      <main
+        id="main-content"
+        className="min-h-screen flex flex-col"
+        role="main"
+      >
         <Header />
 
         <div className="flex-1">
@@ -140,8 +135,12 @@ export default function HomePage() {
                     className="rounded-full border border-neutral-200/40 dark:border-neutral-800/40 bg-white/40 dark:bg-neutral-900/40"
                   />
                   <div>
-                    <h1 className="text-2xl sm:text-3xl font-semibold">{profile.name}</h1>
-                    <p className="text-neutral-600 dark:text-neutral-300">{profile.role}</p>
+                    <h1 className="text-2xl sm:text-3xl font-semibold">
+                      {profile.name}
+                    </h1>
+                    <p className="text-neutral-600 dark:text-neutral-300">
+                      {profile.role}
+                    </p>
                   </div>
                 </div>
 
@@ -155,7 +154,7 @@ export default function HomePage() {
                 {/* Action Row: Download PDF + Jump to Projects + Jump to Experience */}
                 <div className="mt-6">
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                      {/* 1 Page Resume */}
+                    {/* 1 Page Resume */}
                     <a
                       href="/Jerome-de-Dios-Resume-2025.pdf"
                       download="Jerome-de-Dios-Resume-2025.pdf"
@@ -228,7 +227,7 @@ export default function HomePage() {
                     {/* Jump to Projects & Experience */}
                     <div className="col-span-1 sm:col-span-3 flex flex-col sm:flex-row gap-3">
                       <button
-                        onClick={() => scrollToSection('projects')}
+                        onClick={() => scrollToSection("projects")}
                         className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
                         aria-label="Scroll to Projects section"
                       >
@@ -250,7 +249,7 @@ export default function HomePage() {
                       </button>
 
                       <button
-                        onClick={() => scrollToSection('cv')}
+                        onClick={() => scrollToSection("cv")}
                         className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
                         aria-label="Scroll to Experience section"
                       >
@@ -274,107 +273,106 @@ export default function HomePage() {
                   </div>
                 </div>
 
-
-                  {/* ==================== INTERNSHIPS SECTION ==================== */}
-                  <div className="mt-8">
-                    <h2 className="section-title mb-4">Internships</h2>
-                    <div className="space-y-5">
-                      {/* Webeet.io Internship */}
-                      <div className="card p-5">
-                        <div className="flex gap-4">
-                          <div className="flex-shrink-0">
-                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white font-bold text-sm">
-                              WB
-                            </div>
+                {/* ==================== INTERNSHIPS SECTION ==================== */}
+                <div className="mt-8">
+                  <h2 className="section-title mb-4">Internships</h2>
+                  <div className="space-y-5">
+                    {/* Webeet.io Internship */}
+                    <div className="card p-5">
+                      <div className="flex gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white font-bold text-sm">
+                            WB
                           </div>
-                          <div className="flex-1">
-                            <h3 className="font-semibold text-lg">
-                              Webeet.io – Amsterdam, North Holland, Netherlands
-                            </h3>
-                            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                              Intern – Software Development / AI / Cloud
-                            </p>
-                            <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
-                              September 2025 – November 2025
-                            </p>
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-lg">
+                            Webeet.io – Amsterdam, North Holland, Netherlands
+                          </h3>
+                          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                            Intern – Software Development / AI / Cloud
+                          </p>
+                          <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
+                            September 2025 – November 2025
+                          </p>
 
-                            {/* Download Buttons */}
-                            <div className="mt-4 flex flex-col sm:flex-row gap-3">
-                              <a
-                                href="/Internship-Completion-AI-Jerome-De-Dios.pdf"
-                                download="Internship-Completion-AI-Jerome-De-Dios.pdf"
-                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
-                                aria-label="Download AI Engineering certificate"
+                          {/* Download Buttons */}
+                          <div className="mt-4 flex flex-col sm:flex-row gap-3">
+                            <a
+                              href="/Internship-Completion-AI-Jerome-De-Dios.pdf"
+                              download="Internship-Completion-AI-Jerome-De-Dios.pdf"
+                              className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
+                              aria-label="Download AI Engineering certificate"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
                               >
-                                <svg
-                                  aria-hidden="true"
-                                  className="w-4 h-4"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                  />
-                                </svg>
-                                AI Engineering
-                              </a>
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                />
+                              </svg>
+                              AI Engineering
+                            </a>
 
-                              <a
-                                href="/Internship-Completion-Cloud-Jerome-De-Dios.pdf"
-                                download="Internship-Completion-Cloud-Jerome-De-Dios.pdf"
-                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
-                                aria-label="Download Cloud Engineering certificate"
+                            <a
+                              href="/Internship-Completion-Cloud-Jerome-De-Dios.pdf"
+                              download="Internship-Completion-Cloud-Jerome-De-Dios.pdf"
+                              className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
+                              aria-label="Download Cloud Engineering certificate"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
                               >
-                                <svg
-                                  aria-hidden="true"
-                                  className="w-4 h-4"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                  />
-                                </svg>
-                                Cloud Engineering
-                              </a>
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                />
+                              </svg>
+                              Cloud Engineering
+                            </a>
 
-                                                            <a
-                                href="/Jerome de Dios - Webeet Recommendation.pdf"
-                                download="Jerome de Dios - Webeet Recommendation.pdf"
-                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
-                                aria-label="Download Webeet Recommendation"
+                            <a
+                              href="/Jerome de Dios - Webeet Recommendation.pdf"
+                              download="Jerome de Dios - Webeet Recommendation.pdf"
+                              className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
+                              aria-label="Download Webeet Recommendation"
+                            >
+                              <svg
+                                aria-hidden="true"
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
                               >
-                                <svg
-                                  aria-hidden="true"
-                                  className="w-4 h-4"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                  />
-                                </svg>
-                                Webeet Recommendation
-                              </a>
-                            </div>
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                />
+                              </svg>
+                              Webeet Recommendation
+                            </a>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  {/* ==================== END INTERNSHIPS ==================== */}
+                </div>
+                {/* ==================== END INTERNSHIPS ==================== */}
 
                 {/* Education Section */}
                 <div className="mt-8">
@@ -389,7 +387,9 @@ export default function HomePage() {
                           </div>
                         </div>
                         <div className="flex-1">
-                          <h3 className="font-semibold text-lg">Masterschool – Berlin, Germany</h3>
+                          <h3 className="font-semibold text-lg">
+                            Masterschool – Berlin, Germany
+                          </h3>
                           <p className="text-sm text-neutral-600 dark:text-neutral-400">
                             Cloud Engineering & Generative AI Engineering
                           </p>
@@ -403,20 +403,23 @@ export default function HomePage() {
                               Jun 2025 – Nov 2025
                             </p>
                             <div className="mt-2 flex flex-wrap gap-2">
-                              {['AWS', 'Infrastructure as Code (IaC)', 'Cloud Computing', 'Cloud Storage'].map(
-                                (skill, idx) => (
-                                  <span
-                                    key={skill}
-                                    className="inline-block bg-blue-50 dark:bg-blue-950/50 px-2.5 py-1 text-xs text-blue-800 dark:text-blue-200 font-medium rounded-md border border-blue-200 dark:border-blue-800/40 motion-safe:animate-fadeInUp hover:scale-105 hover:shadow-md hover:bg-blue-100 dark:hover:bg-blue-900/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200"
-                                    style={{ animationDelay: `${idx * 30}ms` }}
-                                    tabIndex={0}
-                                    role="listitem"
-                                    aria-label={`Skill: ${skill}`}
-                                  >
-                                    {skill}
-                                  </span>
-                                )
-                              )}
+                              {[
+                                "AWS",
+                                "Infrastructure as Code (IaC)",
+                                "Cloud Computing",
+                                "Cloud Storage",
+                              ].map((skill, idx) => (
+                                <span
+                                  key={skill}
+                                  className="inline-block bg-blue-50 dark:bg-blue-950/50 px-2.5 py-1 text-xs text-blue-800 dark:text-blue-200 font-medium rounded-md border border-blue-200 dark:border-blue-800/40 motion-safe:animate-fadeInUp hover:scale-105 hover:shadow-md hover:bg-blue-100 dark:hover:bg-blue-900/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200"
+                                  style={{ animationDelay: `${idx * 30}ms` }}
+                                  tabIndex={0}
+                                  role="listitem"
+                                  aria-label={`Skill: ${skill}`}
+                                >
+                                  {skill}
+                                </span>
+                              ))}
                             </div>
                           </div>
 
@@ -429,18 +432,24 @@ export default function HomePage() {
                               Sep 2024 – Jun 2025
                             </p>
                             <ul className="mt-2 text-sm text-neutral-700 dark:text-neutral-300 list-disc list-inside space-y-1">
-                              <li>Intensive online training in software & AI engineering</li>
-                              <li>Hands-on with Python, APIs, JavaScript, Flask, SQL</li>
+                              <li>
+                                Intensive online training in software & AI
+                                engineering
+                              </li>
+                              <li>
+                                Hands-on with Python, APIs, JavaScript, Flask,
+                                SQL
+                              </li>
                             </ul>
                             <div className="mt-2 flex flex-wrap gap-2">
                               {[
-                                'Python',
-                                'OpenAI API',
-                                'LangChain',
-                                'LLMs',
-                                'Token Optimization',
-                                'Text Embeddings',
-                                'Streams',
+                                "Python",
+                                "OpenAI API",
+                                "LangChain",
+                                "LLMs",
+                                "Token Optimization",
+                                "Text Embeddings",
+                                "Streams",
                               ].map((skill, idx) => (
                                 <span
                                   key={skill}
@@ -456,58 +465,58 @@ export default function HomePage() {
                             </div>
                           </div>
 
-                            {/* Download Certificates – Two Buttons */}
-                            <div className="mt-5">
-                              <div className="flex flex-col sm:flex-row gap-3">
-                                {/* COC German */}
-                                <a
-                                  href="/de Dios_Masterschool CoC_Deutsch.pdf"
-                                  download="de Dios_Masterschool CoC_Deutsch.pdf"
-                                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
-                                  aria-label="Download Masterschool Cloud Engineering Certificate"
+                          {/* Download Certificates – Two Buttons */}
+                          <div className="mt-5">
+                            <div className="flex flex-col sm:flex-row gap-3">
+                              {/* COC German */}
+                              <a
+                                href="/de Dios_Masterschool CoC_Deutsch.pdf"
+                                download="de Dios_Masterschool CoC_Deutsch.pdf"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
+                                aria-label="Download Masterschool Cloud Engineering Certificate"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  className="w-4 h-4"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    className="w-4 h-4"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      strokeWidth={2}
-                                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                    />
-                                  </svg>
-                                  Certificate of Completion (German)
-                                </a>
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                  />
+                                </svg>
+                                Certificate of Completion (German)
+                              </a>
 
-                                {/* COC German English*/}
-                                <a
-                                  href="/de Dios_Masterschool CoC_English.pdf"
-                                  download="de Dios_Masterschool CoC_English.pdf"
-                                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
-                                  aria-label="Download Masterschool Generative AI Certificate"
+                              {/* COC German English*/}
+                              <a
+                                href="/de Dios_Masterschool CoC_English.pdf"
+                                download="de Dios_Masterschool CoC_English.pdf"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
+                                aria-label="Download Masterschool Generative AI Certificate"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  className="w-4 h-4"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
                                 >
-                                  <svg
-                                    aria-hidden="true"
-                                    className="w-4 h-4"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      strokeWidth={2}
-                                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                    />
-                                  </svg>
-                                  Certificate of Completion (English)
-                                </a>
-                              </div>
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                  />
+                                </svg>
+                                Certificate of Completion (English)
+                              </a>
                             </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -560,7 +569,8 @@ export default function HomePage() {
                         Open to Opportunities
                       </p>
                       <p className="mt-1 text-sm text-blue-700 dark:text-blue-300">
-                        Actively seeking Full-Stack / AI Engineer / Java / Application Support roles in Germany and EU
+                        Actively seeking Full-Stack / AI Engineer / Java /
+                        Application Support roles in Germany and EU
                       </p>
                       <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
                         Updated October 2025
@@ -594,10 +604,12 @@ export default function HomePage() {
                       </p>
                       <ul className="mt-2 space-y-1.5 text-sm text-blue-700 dark:text-blue-300 list-disc list-inside">
                         <li>
-                          <strong>A2 German</strong> in progress — weekly lessons, <strong>online</strong>.
+                          <strong>A2 German</strong> in progress — weekly
+                          lessons, <strong>online</strong>.
                         </li>
                         <li>
-                          <strong>Rust Programming Language</strong> in progress.
+                          <strong>Rust Programming Language</strong> in
+                          progress.
                         </li>
                       </ul>
                       <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
@@ -609,20 +621,25 @@ export default function HomePage() {
               </div>
 
               {/* Skills Sidebar */}
-              <aside className="space-y-4 lg:w-80" role="complementary" aria-label="Skills">
+              <aside
+                className="space-y-4 lg:w-80"
+                role="complementary"
+                aria-label="Skills"
+              >
                 <div className="card p-5 md:p-6">
                   <h2 className="section-title">Skills</h2>
                   <div className="mt-4 space-y-6">
-                    {Object.entries(skillCategories).map(([category, skills]) => (
-                      <div key={category}>
-                        <h3 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-2 tracking-tight">
-                          {category}
-                        </h3>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                          {skills.map((skill, idx) => (
-                            <span
-                              key={skill}
-                              className={`
+                    {Object.entries(skillCategories).map(
+                      ([category, skills]) => (
+                        <div key={category}>
+                          <h3 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-2 tracking-tight">
+                            {category}
+                          </h3>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                            {skills.map((skill, idx) => (
+                              <span
+                                key={skill}
+                                className={`
                                 inline-block px-2.5 py-1 text-xs font-medium rounded-md
                                 border border-green-200 dark:border-green-800/40
                                 bg-green-50 dark:bg-green-950/50 text-green-800 dark:text-green-200
@@ -631,17 +648,18 @@ export default function HomePage() {
                                 hover:scale-105 hover:shadow-md hover:bg-green-100 dark:hover:bg-green-900/50
                                 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900
                               `}
-                              style={{ animationDelay: `${idx * 30}ms` }}
-                              tabIndex={0}
-                              role="listitem"
-                              aria-label={`Skill: ${skill}`}
-                            >
-                              {skill}
-                            </span>
-                          ))}
+                                style={{ animationDelay: `${idx * 30}ms` }}
+                                tabIndex={0}
+                                role="listitem"
+                                aria-label={`Skill: ${skill}`}
+                              >
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ),
+                    )}
                   </div>
                 </div>
               </aside>
@@ -674,7 +692,9 @@ export default function HomePage() {
             <div className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-800">
               <div className="flex flex-wrap items-center justify-between gap-4 text-sm">
                 <button
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                   className="inline-flex items-center gap-2 rounded-md bg-brand/10 px-4 py-2 font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
                   aria-label="Scroll to top of page"
                 >
@@ -738,7 +758,7 @@ export default function HomePage() {
             </div>
             <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
               {cvArticles.slice(0, 4).map((item) => (
-                <CvCard key={`${item.title}-${item.org ?? ''}`} item={item} />
+                <CvCard key={`${item.title}-${item.org ?? ""}`} item={item} />
               ))}
             </div>
           </section>

@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { useMemo, useState } from 'react';
-import clsx from 'clsx';
-import { type Project } from '../data/projects';
-import { ProjectCardLarge } from './ProjectCardLarge';
+import { useMemo, useState } from "react";
+import clsx from "clsx";
+import { type Project } from "../data/projects";
+import { ProjectCardLarge } from "./ProjectCardLarge";
 
 type Props = {
   projects: Project[];
 };
 
 export function ProjectsBrowser({ projects }: Props) {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const [layout, setLayout] = useState<'list' | 'grid'>('list');
+  const [layout, setLayout] = useState<"list" | "grid">("list");
 
   const allTags = useMemo(() => {
     const set = new Set<string>();
@@ -24,7 +24,8 @@ export function ProjectsBrowser({ projects }: Props) {
     const q = query.trim().toLowerCase();
     return projects.filter((p) => {
       const matchesQuery = q
-        ? p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q)
+        ? p.title.toLowerCase().includes(q) ||
+          p.description.toLowerCase().includes(q)
         : true;
       const matchesTags = selectedTags.length
         ? selectedTags.every((t) => p.tags.includes(t))
@@ -35,12 +36,12 @@ export function ProjectsBrowser({ projects }: Props) {
 
   const toggleTag = (tag: string) => {
     setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag],
     );
   };
 
   const clearFilters = () => {
-    setQuery('');
+    setQuery("");
     setSelectedTags([]);
   };
 
@@ -58,23 +59,23 @@ export function ProjectsBrowser({ projects }: Props) {
           <div className="flex items-center gap-2 self-start sm:self-auto">
             <button
               className={clsx(
-                'rounded-lg px-3 py-1.5 text-sm transition-colors border',
-                layout === 'list'
-                  ? 'bg-brand/15 text-brand border-brand/30'
-                  : 'text-neutral-700 dark:text-neutral-200 border-neutral-300/40 dark:border-neutral-700/50 hover:bg-neutral-100/40 dark:hover:bg-neutral-800/40'
+                "rounded-lg px-3 py-1.5 text-sm transition-colors border",
+                layout === "list"
+                  ? "bg-brand/15 text-brand border-brand/30"
+                  : "text-neutral-700 dark:text-neutral-200 border-neutral-300/40 dark:border-neutral-700/50 hover:bg-neutral-100/40 dark:hover:bg-neutral-800/40",
               )}
-              onClick={() => setLayout('list')}
+              onClick={() => setLayout("list")}
             >
               List
             </button>
             <button
               className={clsx(
-                'rounded-lg px-3 py-1.5 text-sm transition-colors border',
-                layout === 'grid'
-                  ? 'bg-brand/15 text-brand border-brand/30'
-                  : 'text-neutral-700 dark:text-neutral-200 border-neutral-300/40 dark:border-neutral-700/50 hover:bg-neutral-100/40 dark:hover:bg-neutral-800/40'
+                "rounded-lg px-3 py-1.5 text-sm transition-colors border",
+                layout === "grid"
+                  ? "bg-brand/15 text-brand border-brand/30"
+                  : "text-neutral-700 dark:text-neutral-200 border-neutral-300/40 dark:border-neutral-700/50 hover:bg-neutral-100/40 dark:hover:bg-neutral-800/40",
               )}
-              onClick={() => setLayout('grid')}
+              onClick={() => setLayout("grid")}
             >
               Grid
             </button>
@@ -105,10 +106,10 @@ export function ProjectsBrowser({ projects }: Props) {
               key={tag}
               onClick={() => toggleTag(tag)}
               className={clsx(
-                'badge transition-colors border',
+                "badge transition-colors border",
                 selectedTags.includes(tag)
-                  ? 'bg-brand/20 text-brand border-brand/30'
-                  : 'bg-neutral-100/70 dark:bg-neutral-800/60 text-neutral-700 dark:text-neutral-200 border-transparent hover:bg-neutral-200/60 dark:hover:bg-neutral-700/60'
+                  ? "bg-brand/20 text-brand border-brand/30"
+                  : "bg-neutral-100/70 dark:bg-neutral-800/60 text-neutral-700 dark:text-neutral-200 border-transparent hover:bg-neutral-200/60 dark:hover:bg-neutral-700/60",
               )}
             >
               {tag}
@@ -120,8 +121,8 @@ export function ProjectsBrowser({ projects }: Props) {
       {/* Results */}
       <div
         className={clsx(
-          'mt-6 grid gap-6',
-          layout === 'grid' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'
+          "mt-6 grid gap-6",
+          layout === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1",
         )}
       >
         {filtered.map((p) => (
@@ -131,5 +132,3 @@ export function ProjectsBrowser({ projects }: Props) {
     </div>
   );
 }
-
-
