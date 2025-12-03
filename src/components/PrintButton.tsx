@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 export function PrintButton() {
   return (
@@ -10,5 +10,3 @@ export function PrintButton() {
     </button>
   );
 }
-
-
