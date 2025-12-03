@@ -155,6 +155,29 @@ export default function HomePage() {
                 {/* Action Row: Download PDF + Jump to Projects + Jump to Experience */}
                 <div className="mt-6">
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                      {/* 1 Page Resume */}
+                    <a
+                      href="/Jerome-de-Dios-Resume-2025.pdf"
+                      download="Jerome-de-Dios-Resume-2025.pdf"
+                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg w-full"
+                      aria-label="Download 1-page resume as PDF"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        />
+                      </svg>
+                      1 Page Resume
+                    </a>
                     {/* Application Support / SRE Resume */}
                     <a
                       href="/Jerome-de-Dios-AppSupport-SRE.pdf"
@@ -202,31 +225,6 @@ export default function HomePage() {
                       </svg>
                       GenAI Resume (SEO and LPS)
                     </a>
-
-                    {/* 1 Page Resume */}
-                    <a
-                      href="/Jerome-de-Dios-Resume-2025.pdf"
-                      download="Jerome-de-Dios-Resume-2025.pdf"
-                      className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg w-full"
-                      aria-label="Download 1-page resume as PDF"
-                    >
-                      <svg
-                        aria-hidden="true"
-                        className="w-5 h-5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                        />
-                      </svg>
-                      1 Page Resume
-                    </a>
-
                     {/* Jump to Projects & Experience */}
                     <div className="col-span-1 sm:col-span-3 flex flex-col sm:flex-row gap-3">
                       <button
@@ -276,76 +274,107 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Info Banner: Open to Opportunities */}
-                <div className="mt-8 p-5 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-200 dark:border-blue-800">
-                  <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center">
-                      <svg
-                        aria-hidden="true"
-                        className="w-4 h-4 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-blue-900 dark:text-blue-100">
-                        Open to Opportunities
-                      </p>
-                      <p className="mt-1 text-sm text-blue-700 dark:text-blue-300">
-                        Actively seeking Full-Stack / AI Engineer / Java / Application Support roles in Germany and EU
-                      </p>
-                      <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
-                        Updated October 2025
-                      </p>
-                    </div>
-                  </div>
-                </div>
 
-                {/* Info Banner: Currently Learning */}
-                <div className="mt-8 p-5 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-200 dark:border-blue-800">
-                  <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center">
-                      <svg
-                        aria-hidden="true"
-                        className="w-4 h-4 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-blue-900 dark:text-blue-100">
-                        Currently Learning
-                      </p>
-                      <ul className="mt-2 space-y-1.5 text-sm text-blue-700 dark:text-blue-300 list-disc list-inside">
-                        <li>
-                          <strong>A2 German</strong> in progress — weekly lessons, <strong>online</strong>.
-                        </li>
-                        <li>
-                          <strong>Rust Programming Language</strong> in progress.
-                        </li>
-                      </ul>
-                      <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
-                        Updated October 2025
-                      </p>
+                  {/* ==================== INTERNSHIPS SECTION ==================== */}
+                  <div className="mt-8">
+                    <h2 className="section-title mb-4">Internships</h2>
+                    <div className="space-y-5">
+                      {/* Webeet.io Internship */}
+                      <div className="card p-5">
+                        <div className="flex gap-4">
+                          <div className="flex-shrink-0">
+                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white font-bold text-sm">
+                              WB
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-lg">
+                              Webeet.io – Amsterdam, North Holland, Netherlands
+                            </h3>
+                            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                              Intern – Software Development / AI / Cloud
+                            </p>
+                            <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
+                              September 2025 – November 2025
+                            </p>
+
+                            {/* Download Buttons */}
+                            <div className="mt-4 flex flex-col sm:flex-row gap-3">
+                              <a
+                                href="/Internship-Completion-AI-Jerome-De-Dios.pdf"
+                                download="Internship-Completion-AI-Jerome-De-Dios.pdf"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
+                                aria-label="Download AI Engineering certificate"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  className="w-4 h-4"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                  />
+                                </svg>
+                                AI Engineering
+                              </a>
+
+                              <a
+                                href="/Internship-Completion-Cloud-Jerome-De-Dios.pdf"
+                                download="Internship-Completion-Cloud-Jerome-De-Dios.pdf"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
+                                aria-label="Download Cloud Engineering certificate"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  className="w-4 h-4"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                  />
+                                </svg>
+                                Cloud Engineering
+                              </a>
+
+                                                            <a
+                                href="/Jerome de Dios - Webeet Recommendation.pdf"
+                                download="Jerome de Dios - Webeet Recommendation.pdf"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
+                                aria-label="Download Webeet Recommendation"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  className="w-4 h-4"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                  />
+                                </svg>
+                                Webeet Recommendation
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                  {/* ==================== END INTERNSHIPS ==================== */}
 
                 {/* Education Section */}
                 <div className="mt-8">
@@ -505,107 +534,77 @@ export default function HomePage() {
                       </div>
                     </div>
                   </div>
+                </div>
 
-                  {/* ==================== INTERNSHIPS SECTION ==================== */}
-                  <div className="mt-8">
-                    <h2 className="section-title mb-4">Internships</h2>
-                    <div className="space-y-5">
-                      {/* Webeet.io Internship */}
-                      <div className="card p-5">
-                        <div className="flex gap-4">
-                          <div className="flex-shrink-0">
-                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white font-bold text-sm">
-                              WB
-                            </div>
-                          </div>
-                          <div className="flex-1">
-                            <h3 className="font-semibold text-lg">
-                              Webeet.io – Amsterdam, North Holland, Netherlands
-                            </h3>
-                            <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                              Intern – Software Development / AI / Cloud
-                            </p>
-                            <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
-                              September 2025 – November 2025
-                            </p>
-
-                            {/* Download Buttons */}
-                            <div className="mt-4 flex flex-col sm:flex-row gap-3">
-                              <a
-                                href="/Internship-Completion-AI-Jerome-De-Dios.pdf"
-                                download="Internship-Completion-AI-Jerome-De-Dios.pdf"
-                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
-                                aria-label="Download AI Engineering certificate"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  className="w-4 h-4"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                  />
-                                </svg>
-                                AI Engineering
-                              </a>
-
-                              <a
-                                href="/Internship-Completion-Cloud-Jerome-De-Dios.pdf"
-                                download="Internship-Completion-Cloud-Jerome-De-Dios.pdf"
-                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
-                                aria-label="Download Cloud Engineering certificate"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  className="w-4 h-4"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                  />
-                                </svg>
-                                Cloud Engineering
-                              </a>
-
-                                                            <a
-                                href="/Jerome de Dios - Webeet Recommendation.pdf"
-                                download="Jerome de Dios - Webeet Recommendation.pdf"
-                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-4 py-2 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg flex-1 sm:flex-initial"
-                                aria-label="Download Webeet Recommendation"
-                              >
-                                <svg
-                                  aria-hidden="true"
-                                  className="w-4 h-4"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                                  />
-                                </svg>
-                                Webeet Recommendation
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                {/* Info Banner: Open to Opportunities */}
+                <div className="mt-8 p-5 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-200 dark:border-blue-800">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center">
+                      <svg
+                        aria-hidden="true"
+                        className="w-4 h-4 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 10V3L4 14h7v7l9-11h-7z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-blue-900 dark:text-blue-100">
+                        Open to Opportunities
+                      </p>
+                      <p className="mt-1 text-sm text-blue-700 dark:text-blue-300">
+                        Actively seeking Full-Stack / AI Engineer / Java / Application Support roles in Germany and EU
+                      </p>
+                      <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
+                        Updated October 2025
+                      </p>
                     </div>
                   </div>
-                  {/* ==================== END INTERNSHIPS ==================== */}
+                </div>
+
+                {/* Info Banner: Currently Learning */}
+                <div className="mt-8 p-5 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-200 dark:border-blue-800">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center">
+                      <svg
+                        aria-hidden="true"
+                        className="w-4 h-4 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 10V3L4 14h7v7l9-11h-7z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-blue-900 dark:text-blue-100">
+                        Currently Learning
+                      </p>
+                      <ul className="mt-2 space-y-1.5 text-sm text-blue-700 dark:text-blue-300 list-disc list-inside">
+                        <li>
+                          <strong>A2 German</strong> in progress — weekly lessons, <strong>online</strong>.
+                        </li>
+                        <li>
+                          <strong>Rust Programming Language</strong> in progress.
+                        </li>
+                      </ul>
+                      <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
+                        Updated October 2025
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 

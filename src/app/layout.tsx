@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { profile } from '../data/profile';
 import { DarkModeProvider } from '../components/DarkModeProvider';
 import { AmbientDrift } from '../components/AmbientDrift';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         <DarkModeProvider>
           <AmbientDrift />
           {children}
+          <SpeedInsights />
         </DarkModeProvider>
       </body>
     </html>
