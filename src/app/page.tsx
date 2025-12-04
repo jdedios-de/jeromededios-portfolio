@@ -199,7 +199,7 @@ export default function HomePage() {
                           d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                         />
                       </svg>
-                      App Support/SRE Resume (SEO and LPS)
+                      App Support/SRE Resume (SEO and ATS)
                     </a>
 
                     {/* GenAI Resume */}
@@ -223,7 +223,7 @@ export default function HomePage() {
                           d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                         />
                       </svg>
-                      GenAI Resume (SEO and LPS)
+                      GenAI Resume (SEO and ATS)
                     </a>
                     {/* Jump to Projects & Experience */}
                     <div className="col-span-1 sm:col-span-3 flex flex-col sm:flex-row gap-3">
