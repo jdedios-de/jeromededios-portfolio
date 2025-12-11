@@ -43,6 +43,10 @@ body {
   @apply scale-105;
 }
 
+.drop-shadow-glow {
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
 /* Animated ambient background utilities */
 @keyframes float {
   0%, 100% { transform: translate3d(0, 0, 0) scale(1); }

@@ -270,6 +270,22 @@ export default function HomePage() {
                         </svg>
                         Experience
                       </button>
+
+                        <a
+                            href="/certificates"
+                            className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
+                        >
+                            <svg
+                              aria-hidden="true"
+                              className="w-10 h-10 animate-bounce text-brand text-orange-500"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                            </svg>
+                            Certificates
+                        </a>
                     </div>
                   </div>
                 </div>
