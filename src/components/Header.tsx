@@ -10,16 +10,19 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-neutral-200/50 dark:border-neutral-800/60 bg-white/60 dark:bg-neutral-950/40 backdrop-blur-md">
-      <div className="container-grid py-3 sm:py-4 flex items-center justify-between gap-4">
+      <div className="container-grid py-3 sm:py-4 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/images/logo.png" width={28} height={28} alt="Logo" />
+          <Image src="/images/logo.png" width={28} height={28} alt="Logo" priority />
           <span className="font-semibold">{profile.name}</span>
         </Link>
-        <nav className="flex items-center gap-4 text-sm">
+
+        {/* Nav: allows wrapping on very small screens */}
+        <nav className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           <Link href="/" className="hover:underline">Home</Link>
           <Link href="/projects" className="hover:underline">Projects</Link>
           <Link href={profile.resumeUrl} className="hover:underline">Experience</Link>
           <Link href="/certificates" className="hover:underline">Certificates</Link>
+
           <button
             onClick={toggleDark}
             className="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
@@ -40,5 +43,3 @@ export function Header() {
     </header>
   );
 }
-
-
