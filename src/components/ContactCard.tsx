@@ -85,6 +85,9 @@ export function ContactCard() {
             </div>
           )}
         </div>
+        {profile.phoneNumber && (
+          <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-300">Please leave a message in the voicemail.</p>
+        )}
       </div>
     </div>
   );
