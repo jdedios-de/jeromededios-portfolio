@@ -313,7 +313,11 @@ export default function HomePage() {
                             <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
                               September 2025 – November 2025
                             </p>
-
+                            <p className="text-xs text-blue-500 dark:text-blue-400 mt-1">
+                              <a href="https://www.webeet.io" target="_blank" rel="noopener noreferrer">
+                                https://www.webeet.io
+                              </a>
+                            </p>
                             {/* Download Buttons */}
                             <div className="mt-4 flex flex-col sm:flex-row gap-3">
                               <a
@@ -409,7 +413,11 @@ export default function HomePage() {
                           <p className="text-sm text-neutral-600 dark:text-neutral-400">
                             Cloud Engineering & Generative AI Engineering
                           </p>
-
+                          <p className="text-sm text-blue-500 dark:text-blue-400">
+                            <a href="https://joinmsit.de" target="_blank" rel="noopener noreferrer">
+                            https://joinmsit.de
+                            </a>
+                          </p>
                           {/* Cloud Engineering */}
                           <div className="mt-3 border-l-4 border-blue-500 pl-4">
                             <p className="font-medium text-blue-700 dark:text-blue-300">

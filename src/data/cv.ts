@@ -11,7 +11,7 @@ export type CvArticle = {
 export const cvArticles: CvArticle[] = [
   {
     title: 'Software and Cloud Engineer (Internship)',
-    org: 'Webeet',
+    org: 'https://www.webeet.io',
     location: 'Remote',
     period: 'Sept 2025 - November 2025',
     bullets: [
@@ -25,7 +25,7 @@ export const cvArticles: CvArticle[] = [
   },
   {
     title: 'Professional Development',
-    org: 'Masterschool',
+    org: 'https://joinmsit.de',
     location: 'Remote',
     period: 'Dec 2023 - Present',
     bullets: [
@@ -39,7 +39,7 @@ export const cvArticles: CvArticle[] = [
   },
   {
     title: 'Senior Application Support Engineer',
-    org: 'Sportserve',
+    org: 'https://sportserve.co',
     location: 'Hybrid',
     period: 'Nov 2021 - Nov 2023',
     bullets: [
@@ -61,7 +61,7 @@ export const cvArticles: CvArticle[] = [
   },
   {
     title: 'Site Reliability Engineer',
-    org: 'Bayview Technologies, Inc',
+    org: 'https://sportserve.co',
     location: 'On-Site',
     period: 'Sep 2019 - Nov 2021',
     bullets: [
