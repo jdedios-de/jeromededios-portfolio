@@ -26,7 +26,7 @@ export const certificates: Certificate[] = [
     date: "February 2026",
     description:
       "A foundational hands-on Kaggle Learn course that teaches core data manipulation with Pandas in Python, covering data loading and saving, indexing and updates, summarizing and transforming data, grouping and sorting, handling data types and missing values, and combining datasets for real-world analysis and preparation for advanced data science topics.",
-    tags: ["kaggle", "Machine Learning", "ML"],
+    tags: ["kaggle", "Machine Learning", "ML", "Pandas"],
     image: "",
     link: "/images/certificates/Jerome de Dios - Pandas.png",
     filename: "Jerome de Dios - Pandas.png"
