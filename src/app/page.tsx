@@ -171,7 +171,7 @@ export default function HomePage() {
 
                     <div className="flex-1">
                       <p className="text-sm font-semibold text-green-900 dark:text-green-100">
-                        New Certificate Updates – February 2026
+                        New Certificate Updates
                       </p>
                       <p className="mt-1 text-sm text-green-800 dark:text-green-300">
                         • Webeet.io Internship Completion Certificates (AI Engineering + Cloud Engineering)
@@ -182,6 +182,10 @@ export default function HomePage() {
                       <p className="mt-0.5 text-sm text-green-800 dark:text-green-300">
                         • Pandas (Data Analysis with Python)
                       </p>
+
+                    <p className="mt-2 text-xs text-green-600 dark:text-green-400">
+                       Updated February 2026
+                    </p>
                     </div>
                   </div>
 
@@ -205,6 +209,42 @@ export default function HomePage() {
                     </a>
                   </div>
                 </div>
+
+                {/* Info Banner: Currently Learning */}
+                <div className="mt-8 p-5 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-200 dark:border-blue-800">
+                  <div className="flex items-start gap-3">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center">
+                      <svg
+                        aria-hidden="true"
+                        className="w-4 h-4 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 10V3L4 14h7v7l9-11h-7z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-blue-900 dark:text-blue-100">
+                        Currently Learning
+                      </p>
+                      <ul className="mt-2 space-y-1.5 text-sm text-blue-700 dark:text-blue-300 list-disc list-inside">
+                        <li>
+                          <strong>German Integration Course</strong> in progress — weekly lessons, online.
+                        </li>
+                      </ul>
+                      <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
+                        Updated February 2026
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 <ProfileCard />
                 <ContactCard />
 
@@ -612,77 +652,6 @@ export default function HomePage() {
                           </p>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Info Banner: Open to Opportunities */}
-                <div className="mt-8 p-5 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-200 dark:border-blue-800">
-                  <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center">
-                      <svg
-                        aria-hidden="true"
-                        className="w-4 h-4 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-blue-900 dark:text-blue-100">
-                        Open to Opportunities
-                      </p>
-                      <p className="mt-1 text-sm text-blue-700 dark:text-blue-300">
-                        Actively seeking Full-Stack / AI Engineer / Java / Application Support roles in Germany and EU
-                      </p>
-                      <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
-                        Updated October 2025
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Info Banner: Currently Learning */}
-                <div className="mt-8 p-5 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/50 dark:to-indigo-950/50 border border-blue-200 dark:border-blue-800">
-                  <div className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center">
-                      <svg
-                        aria-hidden="true"
-                        className="w-4 h-4 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                        />
-                      </svg>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-blue-900 dark:text-blue-100">
-                        Currently Learning
-                      </p>
-                      <ul className="mt-2 space-y-1.5 text-sm text-blue-700 dark:text-blue-300 list-disc list-inside">
-                        <li>
-                          <strong>A2 German</strong> in progress — weekly lessons, <strong>online</strong>.
-                        </li>
-                        <li>
-                          <strong>Rust Programming Language</strong> in progress.
-                        </li>
-                      </ul>
-                      <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
-                        Updated October 2025
-                      </p>
                     </div>
                   </div>
                 </div>
