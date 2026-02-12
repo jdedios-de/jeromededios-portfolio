@@ -182,6 +182,30 @@ export default function HomePage() {
                       <p className="mt-0.5 text-sm text-green-800 dark:text-green-300">
                         • Pandas (Data Analysis with Python)
                       </p>
+                      <p className="mt-3 text-sm font-semibold text-green-900 dark:text-green-100">
+                         Completed Course: AI Productivity
+                         {" "}
+                         <a
+                          href="https://www.youtube.com/watch?v=0ybVBo_m93E"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-100 transition-colors underline underline-offset-2 hover:no-underline"
+                        >
+                          Live Demonstration
+                        </a>
+                      </p>
+                      <p className="mt-3 text-sm font-semibold text-green-900 dark:text-green-100">
+                           New Article: What is Federated Learning?
+                          {" "}
+                          <a
+                            href="https://www.webeet.io/articles/what-is-federated-learning"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-medium text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-100 transition-colors underline underline-offset-2 hover:no-underline"
+                          >
+                           Read the Article
+                          </a>
+                      </p>
 
                     <p className="mt-2 text-xs text-green-600 dark:text-green-400">
                        Updated February 2026
@@ -205,7 +229,7 @@ export default function HomePage() {
                       href="/certificates"
                       className="font-medium text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-100 transition-colors underline underline-offset-2 hover:no-underline"
                     >
-                      View All Certificates →
+                      View All Certificates
                     </a>
                   </div>
                 </div>
