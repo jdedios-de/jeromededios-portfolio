@@ -178,6 +178,17 @@ export default function HomePage() {
                       </p>
                       <p className="mt-0.5 text-sm text-green-800 dark:text-green-300">
                         • Webeet Recommendation Letter
+                         {" "}
+                            <a
+                              href="/Jerome de Dios - Webeet Recommendation.pdf"
+                              download="Jerome de Dios - Webeet Recommendation.pdf"
+                              className="inline-flex items-center gap-1.5 font-medium text-green-700 dark:text-green-300 hover:text-green-900 dark:hover:text-green-100 transition-colors underline underline-offset-2 hover:no-underline"
+                            >
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                              </svg>
+                              Download
+                            </a>
                       </p>
                       <p className="mt-0.5 text-sm text-green-800 dark:text-green-300">
                         • Pandas (Data Analysis with Python)
@@ -215,16 +226,6 @@ export default function HomePage() {
 
                   {/* Quick action links – green/blue mix */}
                   <div className="mt-3 flex flex-wrap gap-3 text-sm">
-                    <a
-                      href="/Jerome de Dios - Webeet Recommendation.pdf"
-                      download="Jerome de Dios - Webeet Recommendation.pdf"
-                      className="inline-flex items-center gap-1.5 font-medium text-green-700 dark:text-green-300 hover:text-green-900 dark:hover:text-green-100 transition-colors underline underline-offset-2 hover:no-underline"
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                      Download Recommendation
-                    </a>
                     <a
                       href="/certificates"
                       className="font-medium text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-100 transition-colors underline underline-offset-2 hover:no-underline"
