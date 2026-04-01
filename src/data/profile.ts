@@ -25,7 +25,7 @@ export const profile: Profile = {
   summary:
     "Software Engineer with over 15 years of experience in development and operations, including Java development, and a proven track record supporting high-traffic sports betting platforms. Skilled in system reliability, troubleshooting, cloud engineering, and collaborating effectively in agile environments. A Masterschool Software Engineering Program graduate, with strong skills in Python, Generative AI, and Cloud Engineering. Committed to building intelligent, scalable solutions and contributing to innovative technology teams, while continuing to develop German language fluency.",
   location: "Auerbach (Vogtland), Saxony, Germany",
-  email: "job@jeromededios.de",
+  email: "work@jeromededios.de",
   lookingFor: "Full time position",
   avatar: "/images/avatar.png",
   resumeUrl: "/resume",

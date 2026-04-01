@@ -125,7 +125,7 @@ export const cvArticles: CvArticle[] = [
     title: 'Java Web Developer',
     org: 'Intevalue Services Inc.',
     location: 'On-Site',
-    period: 'Mar 2012 - Jan 2015',
+    period: 'Sep 2010 - Mar 2012',
     bullets: [
       'Developed and maintained features for online gaming platforms used by 1,000+ daily users.',
       'Improved transactional reliability by 20% by optimizing backend integration for payments and promotions.',
