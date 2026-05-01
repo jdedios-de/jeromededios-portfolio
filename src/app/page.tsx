@@ -414,7 +414,6 @@ export default function HomePage() {
 
                   {/* ==================== INTERNSHIPS SECTION ==================== */}
                   <div className="mt-8">
-                    <h2 className="section-title mb-4">Internships</h2>
                     <div className="space-y-5">
                       {/* Webeet.io Internship */}
                       <div className="card p-5">
@@ -429,7 +428,7 @@ export default function HomePage() {
                               Webeet.io – Amsterdam, North Holland, Netherlands
                             </h3>
                             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                              Intern – Software Development / AI / Cloud
+                              Software Development / AI / Cloud
                             </p>
                             <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-1">
                               September 2025 – November 2025

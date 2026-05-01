@@ -10,7 +10,7 @@ export type CvArticle = {
 
 export const cvArticles: CvArticle[] = [
   {
-    title: 'Software and Cloud Engineer (Internship)',
+    title: 'Software and Cloud Engineer',
     org: 'https://www.webeet.io',
     location: 'Remote',
     period: 'Sept 2025 - November 2025',
