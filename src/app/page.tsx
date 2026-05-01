@@ -174,7 +174,7 @@ export default function HomePage() {
                         New Certificate Updates
                       </p>
                       <p className="mt-1 text-sm text-green-800 dark:text-green-300">
-                        • Webeet.io Internship Completion Certificates (AI Engineering + Cloud Engineering)
+                        • Webeet.io Certificates (AI Engineering + Cloud Engineering)
                       </p>
                       <p className="mt-0.5 text-sm text-green-800 dark:text-green-300">
                         • Webeet Recommendation Letter
