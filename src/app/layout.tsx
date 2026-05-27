@@ -5,6 +5,7 @@ import { profile } from '../data/profile';
 import { DarkModeProvider } from '../components/DarkModeProvider';
 import { AmbientDrift } from '../components/AmbientDrift';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -35,6 +36,7 @@ export default function RootLayout({
           <AmbientDrift />
           {children}
           <SpeedInsights />
+          <Analytics />
         </DarkModeProvider>
       </body>
     </html>
