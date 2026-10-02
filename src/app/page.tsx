@@ -140,7 +140,7 @@ export default function HomePage() {
                                         className="rounded-full border border-neutral-200/40 dark:border-neutral-800/40 bg-white/40 dark:bg-neutral-900/40"
                                     />
                                     <div>
-                                        <h1 className="text-2xl sm:text-3xl font-semibold">{profile.name}</h1>
+                                        <h1 className="text-2xl sm:text-3xl font-semibold notranslate"  translate="no">{profile.name}</h1>
                                         <p className="text-neutral-600 dark:text-neutral-300">{profile.role}</p>
                                     </div>
                                 </div>
