@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {Header} from '../components/Header';
@@ -118,6 +119,34 @@ const skillCategories = {
 };
 
 export default function HomePage() {
+    const [isGerman, setIsGerman] = useState(false);
+
+    // Detect language preference and listen for changes
+    useEffect(() => {
+        const checkLanguage = () => {
+            const currentLang = localStorage.getItem('selected_lang_code') || 'de';
+            setIsGerman(currentLang === 'de');
+        };
+
+        checkLanguage();
+        const interval = setInterval(checkLanguage, 300);
+        window.addEventListener('storage', checkLanguage);
+
+        return () => {
+            clearInterval(interval);
+            window.removeEventListener('storage', checkLanguage);
+        };
+    }, []);
+
+    // Define 1 Page Resume PDF paths dynamically
+    const onePageResumeUrl = isGerman
+        ? '/Jerome-de-Dios-Lebenslauf-2025.pdf' // German version
+        : '/Jerome-de-Dios-Resume-2025.pdf';    // English version
+
+    const onePageResumeFilename = isGerman
+        ? 'Jerome-de-Dios-Lebenslauf-2025.pdf'
+        : 'Jerome-de-Dios-Resume-2025.pdf';
+
     const scrollToSection = (id: string) => {
         document.getElementById(id)?.scrollIntoView({behavior: 'smooth'});
     };
@@ -131,7 +160,7 @@ export default function HomePage() {
                     <section className="container-grid pt-10 sm:pt-14">
                         <div className="grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-6 lg:gap-8">
                             <div className="card hero-card p-5 md:p-6">
-                                <div className="flex items-center gap-4">
+                                <div className="flex items-center gap-4 notranslate" translate="no">
                                     <Image
                                         src={profile.avatar}
                                         alt={`Photo of ${profile.name}, ${profile.role}`}
@@ -292,10 +321,10 @@ export default function HomePage() {
                                 {/* Action Row: Download PDF + Jump to Projects + Jump to Experience */}
                                 <div className="mt-6">
                                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                                        {/* 1 Page Resume */}
+                                        {/* 1-Page Resume */}
                                         <a
-                                            href="/Jerome-de-Dios-Resume-2025.pdf"
-                                            download="Jerome-de-Dios-Resume-2025.pdf"
+                                            href={onePageResumeUrl}
+                                            download={onePageResumeFilename}
                                             className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg w-full"
                                             aria-label="Download 1-page resume as PDF"
                                         >

@@ -16,7 +16,7 @@ export default function ResumePage() {
             <PrintButton />
           </div>
           <div className="mt-6 space-y-4 text-sm leading-6">
-            <p className="font-semibold">{profile.name}</p>
+            <p className="font-semibold notranslate" translate="no">{profile.name}</p>
             <p className="text-neutral-600 dark:text-neutral-300">{profile.role}</p>
             <p>
               <a className="text-brand hover:underline" href={`mailto:${profile.email}`}>{profile.email}</a>
