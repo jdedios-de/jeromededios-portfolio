@@ -177,7 +177,7 @@ export function Header() {
 
         <nav className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
           <Link href="/" className="hover:underline">Home</Link>
-          <Link href="/projects" className="hover:underline">Projects</Link>
+          <Link href={profile.github} className="hover:underline">Projects</Link>
           <Link href={profile.resumeUrl} className="hover:underline">Experience</Link>
           <Link href="/certificates" className="hover:underline">Certificates</Link>
 
