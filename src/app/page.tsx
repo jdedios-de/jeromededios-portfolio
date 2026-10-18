@@ -147,6 +147,14 @@ export default function HomePage() {
         ? 'Jerome-de-Dios-Lebenslauf-2025.pdf'
         : 'Jerome-de-Dios-Resume-2025.pdf';
 
+    const appSupportSRE = isGerman
+        ? '/Jerome de Dios - App Support & SRE - German.pdf' // German version
+        : '/Jerome-de-Dios-Resume-2025.pdf';    // English version
+
+    const appSupportSREFileName = isGerman
+        ? 'Jerome de Dios - App Support & SRE - German.pdf'
+        : 'Jerome-de-Dios-AppSupport-SRE.pdf';
+
     const scrollToSection = (id: string) => {
         document.getElementById(id)?.scrollIntoView({behavior: 'smooth'});
     };
@@ -347,8 +355,8 @@ export default function HomePage() {
                                         </a>
                                         {/* Application Support / SRE Resume */}
                                         <a
-                                            href="/Jerome-de-Dios-AppSupport-SRE.pdf"
-                                            download="Jerome-de-Dios-AppSupport-SRE.pdf"
+                                            href={appSupportSRE}
+                                            download={appSupportSREFileName}
                                             className="inline-flex items-center justify-center gap-2 rounded-lg bg-green-600 px-5 py-3 text-sm font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-900 transition-all duration-200 shadow-md hover:shadow-lg w-full"
                                             aria-label="Download Application Support / SRE resume as PDF"
                                         >
