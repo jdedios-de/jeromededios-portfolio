@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {Header} from '../components/Header';
@@ -169,7 +169,8 @@ export default function HomePage() {
                                         className="rounded-full border border-neutral-200/40 dark:border-neutral-800/40 bg-white/40 dark:bg-neutral-900/40"
                                     />
                                     <div>
-                                        <h1 className="text-2xl sm:text-3xl font-semibold notranslate"  translate="no">{profile.name}</h1>
+                                        <h1 className="text-2xl sm:text-3xl font-semibold notranslate"
+                                            translate="no">{profile.name}</h1>
                                         <p className="text-neutral-600 dark:text-neutral-300">{profile.role}</p>
                                     </div>
                                 </div>
@@ -394,24 +395,13 @@ export default function HomePage() {
                                         {/* Jump to Projects & Experience */}
                                         <div className="col-span-1 sm:col-span-3 flex flex-col sm:flex-row gap-3">
                                             <button
-                                                onClick={() => scrollToSection('projects')}
+                                                type="button"
+                                                onClick={() =>
+                                                    window.open(profile.github, "_blank", "noopener,noreferrer")
+                                                }
                                                 className="flex-1 inline-flex items-center justify-center gap-2 rounded-lg bg-brand/10 px-4 py-3 text-sm font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
-                                                aria-label="Scroll to Projects section"
+                                                aria-label="Visit GitHub profile"
                                             >
-                                                <svg
-                                                    aria-hidden="true"
-                                                    className="w-4 h-4"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    viewBox="0 0 24 24"
-                                                >
-                                                    <path
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        strokeWidth={2}
-                                                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                                                    />
-                                                </svg>
                                                 Projects
                                             </button>
 
@@ -777,77 +767,6 @@ export default function HomePage() {
                                     </div>
                                 </div>
                             </aside>
-                        </div>
-                    </section>
-
-                    {/* Projects Section */}
-                    <section
-                        id="projects"
-                        className="container-grid pt-10 sm:pt-14"
-                        aria-labelledby="projects-heading"
-                    >
-                        <div className="flex items-end justify-between gap-4">
-                            <h2 id="projects-heading" className="section-title">
-                                Projects
-                            </h2>
-                            <Link
-                                href="/projects"
-                                className="text-brand hover:underline text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900 rounded"
-                            >
-                                View all
-                            </Link>
-                        </div>
-                        <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
-                            {projects.slice(0, 4).map((p) => (
-                                <ProjectCard key={p.title} project={p}/>
-                            ))}
-                        </div>
-
-                        <div className="mt-8 pt-6 border-t border-neutral-200 dark:border-neutral-800">
-                            <div className="flex flex-wrap items-center justify-between gap-4 text-sm">
-                                <button
-                                    onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}
-                                    className="inline-flex items-center gap-2 rounded-md bg-brand/10 px-4 py-2 font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
-                                    aria-label="Scroll to top of page"
-                                >
-                                    <svg
-                                        aria-hidden="true"
-                                        className="w-4 h-4"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M5 10l7-7m0 0l7 7m-7-7v18"
-                                        />
-                                    </svg>
-                                    Back to Top
-                                </button>
-
-                                <Link
-                                    href="/projects"
-                                    className="inline-flex items-center gap-2 rounded-md bg-brand/10 px-4 py-2 font-medium text-brand hover:bg-brand/20 transition-colors focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2 dark:focus:ring-offset-neutral-900"
-                                >
-                                    <svg
-                                        aria-hidden="true"
-                                        className="w-4 h-4"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth={2}
-                                            d="M13 10V3L4 14h7v7l9-11h-7z"
-                                        />
-                                    </svg>
-                                    View All Projects
-                                </Link>
-                            </div>
                         </div>
                     </section>
 
