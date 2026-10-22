@@ -149,7 +149,7 @@ export default function HomePage() {
 
     const appSupportSRE = isGerman
         ? '/Jerome de Dios - App Support & SRE - German.pdf' // German version
-        : '/Jerome-de-Dios-Resume-2025.pdf';    // English version
+        : '/Jerome-de-Dios-AppSupport-SRE.pdf';    // English version
 
     const appSupportSREFileName = isGerman
         ? 'Jerome de Dios - App Support & SRE - German.pdf'
