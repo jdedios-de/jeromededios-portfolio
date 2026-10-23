@@ -210,7 +210,7 @@ export default function HomePage() {
                                         </div>
                                         <div>
                                             <p className="text-sm font-semibold text-blue-900 dark:text-blue-100">
-                                                Learning
+                                                Learning / Updates
                                             </p>
                                             <ul className="mt-2 space-y-1.5 text-sm text-blue-700 dark:text-blue-300 list-disc list-inside">
                                                 <li>
@@ -218,106 +218,7 @@ export default function HomePage() {
                                                     lessons, online.
                                                 </li>
                                             </ul>
-                                            <ul className="mt-2 space-y-1.5 text-sm text-blue-700 dark:text-blue-300 list-disc list-inside">
-                                                <li>
-                                                    <strong>German Drivers License</strong> coming soon
-                                                </li>
-                                            </ul>
                                             <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
-                                                Updated August 2026
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                {/* New Certificate Updates Banner – Green/Blue Themed – February 2026 */}
-
-                                <div
-                                    className="mt-6 p-4 rounded-xl bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950/30 dark:to-blue-950/30 border border-green-200 dark:border-green-800/50 shadow-sm">
-                                    <div className="flex items-center gap-3">
-                                        {/* Icon: certificate badge with green-blue gradient */}
-                                        <div
-                                            className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center text-white">
-                                            <svg
-                                                className="w-6 h-6"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                viewBox="0 0 24 24"
-                                                aria-hidden="true"
-                                            >
-                                                <path
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth={2}
-                                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                                                />
-                                            </svg>
-                                        </div>
-
-                                        <div className="flex-1">
-                                            <p className="text-sm font-semibold text-green-900 dark:text-green-100">
-                                                Updates
-                                            </p>
-                                            <p className="mt-1 text-sm text-green-800 dark:text-green-300">
-                                                • Internship Certificates (AI Engineering + Cloud Engineering)
-                                            </p>
-                                            <p className="mt-0.5 text-sm text-green-800 dark:text-green-300">
-                                                • Internship Recommendation Letter
-                                                {" "}
-                                                <a
-                                                    href="/Jerome de Dios - Webeet Recommendation.pdf"
-                                                    download="Jerome de Dios - Webeet Recommendation.pdf"
-                                                    className="inline-flex items-center gap-1.5 font-medium text-green-700 dark:text-green-300 hover:text-green-900 dark:hover:text-green-100 transition-colors underline underline-offset-2 hover:no-underline"
-                                                >
-                                                    <svg className="w-4 h-4" fill="none" stroke="currentColor"
-                                                         viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round"
-                                                              strokeWidth={2}
-                                                              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                                    </svg>
-                                                    Download
-                                                </a>
-                                            </p>
-                                            <p className="mt-0.5 text-sm text-green-800 dark:text-green-300">
-                                                • Completed Course: AI Productivity
-                                                {" "}
-                                                <a
-                                                    href="https://www.youtube.com/watch?v=0ybVBo_m93E"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-flex items-center gap-1.5 font-medium text-green-700 dark:text-green-300 hover:text-green-900 dark:hover:text-green-100 transition-colors underline underline-offset-2 hover:no-underline"
-                                                >
-                                                    <svg className="w-4 h-4" fill="none" stroke="currentColor"
-                                                         viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round"
-                                                              strokeWidth={2}
-                                                              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                                    </svg>
-                                                    Live Demonstration
-                                                </a>
-                                            </p>
-
-                                            <p className="mt-0.5 text-sm text-green-800 dark:text-green-300">
-                                                • New Article: What is Federated Learning?
-                                                {" "}
-                                                <a
-                                                    href="https://www.webeet.io/articles/what-is-federated-learning"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="inline-flex items-center gap-1.5 font-medium text-green-700 dark:text-green-300 hover:text-green-900 dark:hover:text-green-100 transition-colors underline underline-offset-2 hover:no-underline"
-                                                >
-                                                    <svg className="w-4 h-4" fill="none" stroke="currentColor"
-                                                         viewBox="0 0 24 24">
-                                                        <path strokeLinecap="round" strokeLinejoin="round"
-                                                              strokeWidth={2}
-                                                              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                                    </svg>
-                                                    Read the Article
-                                                </a>
-                                            </p>
-
-                                            <p className="mt-2 text-xs text-green-600 dark:text-green-400">
                                                 Updated August 2026
                                             </p>
                                         </div>
