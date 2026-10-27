@@ -32,7 +32,7 @@ export const cvArticles: CvArticle[] = [
     title: 'Professional Development – Software Engineering & Generative AI',
     org: 'https://joinmsit.de',
     location: 'Remote',
-    period: 'Dec 2023 - September 2025',
+    period: 'December 2023 - September 2025',
     bullets: [
       'Software Engineering & Programming: Completed intensive software engineering training focused on Python, JavaScript, API development, Flask, SQL, and the development of practical software applications.',
       'Generative AI & AI Engineering: Developed practical knowledge of integrating AI capabilities into software applications, working with AI APIs, and applying generative AI concepts through hands-on projects.',
