@@ -39,7 +39,7 @@ export default function ResumePage() {
                       {a.period && <span className="text-xs text-neutral-500 dark:text-neutral-400">{a.period}</span>}
                     </div>
                     {(a.org || a.location) && (
-                      <p className="text-sm text-neutral-600 dark:text-neutral-300">{[a.org, a.location].filter(Boolean).join(' · ')}</p>
+                      <p className="text-sm text-neutral-600 dark:text-neutral-300">{[a.org, a.location, a.orglinkedIn].filter(Boolean).join(' · ')}</p>
                     )}
                     <ul className="mt-2 list-disc pl-5 space-y-1">
                       {a.bullets.map((b, i) => (
