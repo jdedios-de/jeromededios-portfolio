@@ -29,3 +29,5 @@ npm-debug.log*
 .vercel
 .next
 .idea.next
+.DS_Store
+**/.DS_Store
