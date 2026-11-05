@@ -11,6 +11,20 @@ export type Certificate = {
 
 export const certificates: Certificate[] = [
   {
+    title: "DTZ Zertifikat B1",
+    issuer: "BAMF",
+    date: "25.09.2026",
+    description:
+      "The German language test for immigrants is administered as the final exam for the integration course and is based on the course’s\n" +
+      "framework curriculum. Since 2023, the Society for Academic Study Preparation and Test Development (ga.s.t.)\n" +
+      "has been responsible for administering and conducting the test.",
+    tags: ["DTZ", "B1"],
+    image: "",
+    link: "/images/certificates/Jerome de Dios - DTZ - Hidden Informaton.pdf",
+    filename: "Jerome de Dios - DTZ - Hidden Informaton.pdf"
+  }
+    ,
+  {
     title: "Intro to Machine Learning",
     issuer: "kaggle",
     date: "December 2025",

@@ -214,8 +214,18 @@ export default function HomePage() {
                                             </p>
                                             <ul className="mt-2 space-y-1.5 text-sm text-blue-700 dark:text-blue-300 list-disc list-inside">
                                                 <li>
-                                                    <strong>German Integration Course B1</strong> in progress — weekly
-                                                    lessons, online.
+                                                    <strong>
+                                                        <a
+                                                            href="/certificates"
+                                                            className="underline hover:text-blue-900 dark:hover:text-blue-200 transition-colors"
+                                                            aria-label="View German Integration Course B1 certificate"
+                                                        >
+                                                            German Integration Course B1
+                                                        </a>
+                                                    </strong>{" "}
+                                                    <strong className="text-red-600 dark:text-red-400 animate-pulse">
+                                                        Completed!!!
+                                                    </strong>
                                                 </li>
                                             </ul>
                                             <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
